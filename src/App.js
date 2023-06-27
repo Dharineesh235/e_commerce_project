@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+// import { useEffect, useState } from 'react';
+import Head from './header/Head';
+import ModalContextProvider from './ModalContextProvider/ModalContextProvider';
+import ErrorBoundary from './Error_Boundary/ErrorBoundary';
 
 function App() {
+  // const [products, setProducts] = useState([])
+  // const [filteredList, setFilteredList] = useState([]);
+  // const dummy = true;
+  // useEffect(()=>{
+  //   fetch('http://localhost:5000/products', {method:'GET'}).then(res=>res.json()).then(data=>{setProducts(data); console.log(products)});
+  // },[dummy])
+  // function handleFilter(e){
+  //   let word = e.target.value;
+  //   let filtArr = products.length && products.filter(item=>{
+  //     return item.name.toLowerCase().includes(word.toLowerCase())
+  //   });
+  //   products.length && setFilteredList(filtArr)
+  //   products.length && console.log(filteredList);
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundary>
+      <ModalContextProvider>
+        <div className="App">
+          <Head/>
+        </div>
+      </ModalContextProvider>
+    </ErrorBoundary>
   );
 }
 
