@@ -1,5 +1,5 @@
-start-Script : npm start
-json-server start command : npx json-server --port 5000 --watch db.json
+(start-Script : npm start, 
+(json-server start command : npx json-server --port 5000 --watch db.json)
 ______________________________________________________________________________________________________________________________________________________________
 # Getting Started with Create React App
 
